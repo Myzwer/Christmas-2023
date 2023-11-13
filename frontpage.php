@@ -13,120 +13,82 @@
 
 get_header(); ?>
 
-    <video class="header-video" src="https://foothillscollective.com/wp-content/uploads/2021/04/Res-Power-Background.mp4" autoplay loop playsinline muted></video>
-
-    <div class="viewport-header">
-        <div class="head-container">
-            <div class="center add-padding">
-                <h1 class="text-white text-5xl pb-5">Header Title</h1>
-            </div>
-            <hr class="text-white pb-5">
-            <h2 class="text-white text-3xl ">Title</h2>
-            <h3 class="text-white text-2xl">Subtitle</h3>
+    <!-- Start Header -->
+    <div class="bg-no-repeat bg-scroll bg-cover relative" style="background: linear-gradient(
+  rgba(0, 0, 0, 0.45),
+  rgba(0, 0, 0, 0.45)
+), url('https://images.unsplash.com/photo-1501612780327-45045538702b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80') center center; background-repeat: no-repeat; background-size: cover;
+ height: 60vh;">
+        <div class="content-middle text-white text-center">
+            <h1 class="text-4xl mb-5">Articles & Podcasts</h1>
+            <a href=""
+               class="bg-white rounded-full font-bold text-black px-8 py-3 transition duration-300 ease-in-out hover:bg-blue-light mt-10">
+                Click here
+            </a>
         </div>
     </div>
+    <!-- End Header -->
 
-    <div class="bg-white pb-10">
-        <div class="m-4 md:m-10 lg:max-w-4xl lg:text-center lg:mx-auto pt-10">
-            <div class="grid">
-                <div class=" grid-cols-12">
-                    <div class="col-span-12">
-                        <div class="text-center md:text-left mb-1">
-                            <h1>Color Pod</h1>
-                            <p>All fields optional</p>
+
+    <div class="bg-white bg-no-repeat bg-scroll bg-cover relative" style="background:
+            url('<?php the_field('noise', 'option'); ?>') no-repeat bottom center scroll; background-size: cover; ">
+        <div class="lg:max-w-6xl lg:mx-auto">
+
+            <!-- Start Outer -->
+            <div class="grid grid-cols-12 pt-10">
+                <div class="col-span-12 md:col-span-8">
+
+                    <!-- Start Text Inner Row 1 -->
+                    <?php if (have_rows('maryville')): ?>
+                        <?php while (have_rows('maryville')): the_row(); ?>
+                            <div class="grid grid-cols-12 py-10">
+                                <div class="col-span-2">
+                                    <img src="<?php the_sub_field('decor_image'); ?>" alt="Tree">
+                                </div>
+                                <div class="col-span-10">
+                                    <h2><?php the_sub_field('location_title'); ?></h2>
+                                    <h3><?php the_sub_field('day_1'); ?></h3>
+                                    <p><?php the_sub_field('time_1'); ?></p>
+
+                                    <h3><?php the_sub_field('day_2'); ?></h3>
+                                    <p><?php the_sub_field('time_2'); ?></p>
+                                </div>
+                            </div>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                    <!-- End Text Inner Row 1 -->
+
+                    <!-- Start Text Inner Row 2 -->
+                    <div class="grid grid-cols-12 py-10">
+                        <div class="col-span-2">
+                            <img src="" alt="Lamp">
                         </div>
-                        <hr>
+                        <div class="col-span-10">
+                            Knoxville
+                        </div>
                     </div>
+                    <!-- End Text Inner Row 2 -->
+
+                    <!-- Start Text Inner Row 2 -->
+                    <div class="grid grid-cols-12 py-10">
+                        <div class="col-span-2">
+                            <img src="" alt="Tree">
+                        </div>
+                        <div class="col-span-10">
+                            FTG
+                        </div>
+                    </div>
+                    <!-- End Text Inner Row 2 -->
+
                 </div>
+
+                <div class="col-span-12 md:col-span-4">
+                    <img src="<?php the_field('houses'); ?>" alt="Houses">
+                </div>
+
             </div>
+            <!-- End Outer -->
 
-            <div class="grid grid-cols-12 gap-4 mt-6">
-                <div class="col-span-12 lg:col-span-4 card-gradient-1 rounded-xl shadow-xl">
-                    <div class="text-center p-4">
-                        <h2 class = "font-bold text-2xl">Title</h2>
-                        <h4 class = "font-semibold">Subtitle</h4>
-                        <p class = "text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam commodi consequuntur distinctio doloribus eaque, earum exercitationem, fuga iste labore magni, maxime molestiae nulla pariatur quod sapiente totam vel voluptate?</p>
-                        <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                            Call To Action
-                        </button>
-                    </div>
-                </div>
-
-                <div class="col-span-12 md:col-span-6 lg:col-span-4 card-gradient-2 rounded-xl shadow-xl">
-                    <div class="text-center p-4">
-                        <h2 class = "font-bold text-2xl">Title</h2>
-                        <h4 class = "font-semibold">Subtitle</h4>
-                        <p class = "text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam commodi consequuntur distinctio doloribus eaque, earum exercitationem, fuga iste labore magni, maxime molestiae nulla pariatur quod sapiente totam vel voluptate?</p>
-                        <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                            Call To Action
-                        </button>
-                    </div>
-                </div>
-
-                <div class="col-span-12 md:col-span-6 lg:col-span-4 card-gradient-3 rounded-xl shadow-xl">
-                    <div class="text-center p-4">
-                        <h2 class = "font-bold text-2xl">Title</h2>
-                        <h4 class = "font-semibold">Subtitle</h4>
-                        <p class = "text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam commodi consequuntur distinctio doloribus eaque, earum exercitationem, fuga iste labore magni, maxime molestiae nulla pariatur quod sapiente totam vel voluptate?</p>
-                        <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                            Call To Action
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-12 mt-20">
-                <div class="col-span-12">
-                    <div class="text-center md:text-left mb-1">
-                        <h1>PDF Download (four-up)</h1>
-                        <p>This configuration always shows four PDF's on one row.</p>
-                    </div>
-                    <hr>
-                </div>
-            </div>
-
-
-            <div class="grid grid-cols-12 mt-5 gap-6">
-                <div class="col-span-12 md:col-span-6 lg:col-span-3">
-                    <div class="text-center mb-1">
-                        <div class="w-24 text-center m-auto my-3">
-                            <img class = "rounded-full" src="https://images.unsplash.com/photo-1508515053963-70c7cc39dfb5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" alt="">
-                        </div>
-                        <h2 class = "font-bold text-2xl">PDF Title</h2>
-                        <p class = "text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam corporis cumque doloremque error esse exercitationem explicabo iure iusto magni molestiae, nulla odio quam quo repellat vero. Aliquam possimus repellendus voluptate.</p>
-                    </div>
-                </div>
-
-                <div class="col-span-12 md:col-span-6 lg:col-span-3">
-                    <div class="text-center mb-1">
-                        <div class="w-24 text-center m-auto my-3">
-                            <img class = "rounded-full" src="https://images.unsplash.com/photo-1508515053963-70c7cc39dfb5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" alt="">
-                        </div>
-                        <h2 class = "font-bold text-2xl">PDF Title</h2>
-                        <p class = "text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam corporis cumque doloremque error esse exercitationem explicabo iure iusto magni molestiae, nulla odio quam quo repellat vero. Aliquam possimus repellendus voluptate.</p>
-                    </div>
-                </div>
-
-                <div class="col-span-12 md:col-span-6 lg:col-span-3">
-                    <div class="text-center mb-1">
-                        <div class="w-24 text-center m-auto my-3">
-                            <img class = "rounded-full" src="https://images.unsplash.com/photo-1508515053963-70c7cc39dfb5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" alt="">
-                        </div>
-                        <h2 class = "font-bold text-2xl">PDF Title</h2>
-                        <p class = "text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam corporis cumque doloremque error esse exercitationem explicabo iure iusto magni molestiae, nulla odio quam quo repellat vero. Aliquam possimus repellendus voluptate.</p>
-                    </div>
-                </div>
-
-                <div class="col-span-12 md:col-span-6 lg:col-span-3">
-                    <div class="text-center mb-1">
-                        <div class="w-24 text-center m-auto my-3">
-                            <img class = "rounded-full" src="https://images.unsplash.com/photo-1508515053963-70c7cc39dfb5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" alt="">
-                        </div>
-                        <h2 class = "font-bold text-2xl">PDF Title</h2>
-                        <p class = "text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam corporis cumque doloremque error esse exercitationem explicabo iure iusto magni molestiae, nulla odio quam quo repellat vero. Aliquam possimus repellendus voluptate.</p>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 
