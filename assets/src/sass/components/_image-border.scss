@@ -1,0 +1,22 @@
+.image-border {
+  border: 5px solid #eeeeee;
+  border-radius: 15px;
+}
+
+.rounded-image {
+  border-radius: 10px;
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.inset-box {
+  border: 5px solid #eeeeee;
+  border-radius: 15px;
+  bottom: 30px;
+  left: 30px;
+  pointer-events: none; /* Ensure the inset box doesn't interfere with interactions */
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
