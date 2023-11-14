@@ -146,23 +146,20 @@ if (have_rows('experience_info')) :
                 echo "</div>";
                 break;
 
-            // FIXME: Only for building/debugging, shouldn't be left in for production
-            default:
-                echo "Unhandled content block: " . get_row_layout();
-                break;
         }
         echo "</div>";
         $counter++;
 
         // End loop.
     endwhile;
-
-// No value.
-else :
-// Do something...
 endif;
 ?>
     </div>
+
+
+
+
+
 
 <?php
 get_footer();
