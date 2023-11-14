@@ -38,19 +38,21 @@ get_header(); ?>
             <div class="grid grid-cols-12 pt-10">
                 <div class="col-span-12 md:col-span-8">
 
-                    <!-- Start Text Inner Row 1 -->
+                    <!-- Start Text Inner Row 1 - Maryville -->
                     <?php if (have_rows('maryville')): ?>
                         <?php while (have_rows('maryville')): the_row(); ?>
-                            <div class="grid grid-cols-12 py-10">
-                                <div class="col-span-2">
-                                    <img src="<?php the_sub_field('decor_image'); ?>" alt="Tree">
+                            <div class="grid grid-cols-12 gap-4 p-5 py-10">
+                                <div class="col-span-2 relative">
+                                    <div class="content-middle">
+                                        <img src="<?php the_sub_field('decor_image'); ?>" alt="Tree">
+                                    </div>
                                 </div>
                                 <div class="col-span-10">
-                                    <h2><?php the_sub_field('location_title'); ?></h2>
-                                    <h3><?php the_sub_field('day_1'); ?></h3>
-                                    <p><?php the_sub_field('time_1'); ?></p>
+                                    <h2 class = "text-4xl font-bold uppercase pb-2"><?php the_sub_field('location_title'); ?></h2>
+                                    <h3 class = "text-xl font-bold uppercase"><?php the_sub_field('day_1'); ?></h3>
+                                    <p class = "pb-5"><?php the_sub_field('time_1'); ?></p>
 
-                                    <h3><?php the_sub_field('day_2'); ?></h3>
+                                    <h3 class = "text-xl font-bold uppercase"><?php the_sub_field('day_2'); ?></h3>
                                     <p><?php the_sub_field('time_2'); ?></p>
                                 </div>
                             </div>
@@ -58,32 +60,51 @@ get_header(); ?>
                     <?php endif; ?>
                     <!-- End Text Inner Row 1 -->
 
-                    <!-- Start Text Inner Row 2 -->
-                    <div class="grid grid-cols-12 py-10">
-                        <div class="col-span-2">
-                            <img src="" alt="Lamp">
-                        </div>
-                        <div class="col-span-10">
-                            Knoxville
-                        </div>
-                    </div>
+                    <!-- Start Text Inner Row 2 - Knoxville -->
+                    <?php if (have_rows('knoxville')): ?>
+                        <?php while (have_rows('knoxville')): the_row(); ?>
+                            <div class="grid grid-cols-12 gap-4 p-5 py-10">
+                                <div class="col-span-2 relative">
+                                    <div class="content-middle">
+                                        <img src="<?php the_sub_field('decor_image'); ?>" alt="Lamp">
+                                    </div>
+                                </div>
+                                <div class="col-span-10">
+                                    <h2 class = "text-4xl font-bold uppercase pb-2"><?php the_sub_field('location_title'); ?></h2>
+                                    <h3 class = "text-xl font-bold uppercase"><?php the_sub_field('day_1'); ?></h3>
+                                    <p class = "pb-5"><?php the_sub_field('time_1'); ?></p>
+                                </div>
+                            </div>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
                     <!-- End Text Inner Row 2 -->
 
-                    <!-- Start Text Inner Row 2 -->
-                    <div class="grid grid-cols-12 py-10">
-                        <div class="col-span-2">
-                            <img src="" alt="Tree">
-                        </div>
-                        <div class="col-span-10">
-                            FTG
-                        </div>
-                    </div>
-                    <!-- End Text Inner Row 2 -->
+                    <!-- Start Text Inner Row 3 - FTG -->
+                    <?php if (have_rows('ftg')): ?>
+                        <?php while (have_rows('ftg')): the_row(); ?>
+                            <div class="grid grid-cols-12 gap-4 p-5 py-10 -mb-24 md:mb-10 z-10 relative">
+                                <div class="col-span-2 relative">
+                                    <div class="content-middle">
+                                        <img src="<?php the_sub_field('decor_image'); ?>" alt="Tree">
+                                    </div>
+                                </div>
+                                <div class="col-span-10">
+                                    <h2 class = "text-4xl font-bold uppercase pb-2"><?php the_sub_field('location_title'); ?></h2>
+                                    <a href="<?php the_sub_field('button_link'); ?>">
+                                        <button class="mx-auto lg:mx-0 bg-yellow text-black font-bold rounded-md py-3 px-5 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                                            <?php the_sub_field('button_text'); ?>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                    <!-- End Text Inner Row 3 -->
 
                 </div>
 
-                <div class="col-span-12 md:col-span-4">
-                    <img src="<?php the_field('houses'); ?>" alt="Houses">
+                <div class="col-span-12 md:col-span-4 relative z-0">
+                    <img class = "md:absolute bottom-0" src="<?php the_field('houses'); ?>" alt="Houses">
                 </div>
 
             </div>
