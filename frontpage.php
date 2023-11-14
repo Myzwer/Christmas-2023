@@ -29,7 +29,6 @@ get_header(); ?>
     </div>
     <!-- End Header -->
 
-
     <div class="bg-white bg-no-repeat bg-scroll bg-cover relative" style="background:
             url('<?php the_field('noise', 'option'); ?>') no-repeat bottom center scroll; background-size: cover; ">
         <div class="lg:max-w-6xl lg:mx-auto">
@@ -113,6 +112,57 @@ get_header(); ?>
         </div>
     </div>
 
+<?php
+// Check value exists.
+if (have_rows('experience_info')) :
+
+    // used for alternating colors
+    // Note Highlight overrides this to force a blue
+    $counter = 0;
+
+    // Loop through rows.
+    while (have_rows('experience_info')) : the_row();
+
+        if (0 === $counter % 2) {
+            $bg = 'bg-red';
+            $font = "text-white";
+        } else {
+            $bg = 'bg-yellow';
+            $font = "text-black";
+        }
+
+        echo "<div class='$bg $font'>";
+
+        switch (get_row_layout()) {
+            case 'standard_block':
+                echo "<div class='col-span-12'>";
+                get_template_part('components/layouts/info-block');
+                echo "</div>";
+                break;
+
+            case 'highlight_block':
+                echo "<div class='col-span-12'>";
+                get_template_part('components/layouts/highlight-block');
+                echo "</div>";
+                break;
+
+            // FIXME: Only for building/debugging, shouldn't be left in for production
+            default:
+                echo "Unhandled content block: " . get_row_layout();
+                break;
+        }
+        echo "</div>";
+        $counter++;
+
+        // End loop.
+    endwhile;
+
+// No value.
+else :
+// Do something...
+endif;
+?>
+    </div>
 
 <?php
 get_footer();
