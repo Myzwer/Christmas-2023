@@ -13,23 +13,26 @@
 
 get_header(); ?>
 
+    <!-- Start Particles-->
+    <div id="particles-js"></div>
+    <!-- End particles -->
+
     <!-- Start Header -->
-    <div class="bg-no-repeat bg-scroll bg-cover relative" style="background: linear-gradient(
-  rgba(0, 0, 0, 0.45),
-  rgba(0, 0, 0, 0.45)
-), url('https://images.unsplash.com/photo-1501612780327-45045538702b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80') center center; background-repeat: no-repeat; background-size: cover;
- height: 60vh;">
-        <div class="content-middle text-white text-center">
-            <h1 class="text-4xl mb-5">Articles & Podcasts</h1>
-            <a href=""
-               class="bg-white rounded-full font-bold text-black px-8 py-3 transition duration-300 ease-in-out hover:bg-blue-light mt-10">
-                Click here
-            </a>
+    <video class="header-video" src="<?php the_field('video'); ?>" autoplay loop playsinline muted></video>
+
+    <div class="viewport-header">
+        <div class="head-container z-10">
+            <div class="w-10/12 md:w-1/2 mx-auto">
+                <img src="<?php the_field('acf_logo');?>" alt="ACF Logo">
+            </div>
+            <div class="bg-white rounded-xl shadow-xl p-3 m-5">
+            <h2 class="text-red text-xl md:text-3xl font-bold uppercase"><?php the_field('subtitle');?></h2>
+            </div>
         </div>
     </div>
     <!-- End Header -->
-
-    <div class="bg-white bg-no-repeat bg-scroll bg-cover relative" style="background:
+<div class="bg-white relative z-20">
+    <div class="bg-no-repeat bg-scroll bg-cover relative" style="background:
             url('<?php the_field('noise', 'option'); ?>') no-repeat bottom center scroll; background-size: cover; ">
         <div class="lg:max-w-6xl lg:mx-auto">
 
@@ -111,6 +114,7 @@ get_header(); ?>
 
         </div>
     </div>
+</div>
 
 <?php
 // Check value exists.
