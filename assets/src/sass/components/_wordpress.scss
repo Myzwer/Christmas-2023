@@ -26,6 +26,45 @@
   }
 }
 
+// Not my class names, sooo....
+/* stylelint-disable selector-max-id, selector-max-compound-selectors, selector-class-pattern */
+
+.gform_title,
+.gform_description {
+  display: none;
+}
+
+.gform_body input {
+  background-color: #eeeeee;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  color: #fdfbef;
+}
+
+.gform_body input:focus {
+  border: 1px solid #1d5134;
+  outline: none !important;
+}
+
+.gfield_required {
+  color: #ffb97a;
+}
+
+.gform_body input::placeholder {
+  color: #fdfbef;
+  opacity: 0.5;
+}
+
+.gform_button {
+  background-color: #ffb97a !important;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  color: #333333;
+  padding: 5px 30px;
+}
+
+/* stylelint-enable selector-max-id, selector-max-compound-selectors, selector-class-pattern */
+
 /* Privacy Policy Page */
 // WP generates this, so in order for it to look right I have to manually style it.
 .privacy-policy {
