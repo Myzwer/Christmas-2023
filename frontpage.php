@@ -47,11 +47,11 @@ get_header(); ?>
                                     </div>
                                 </div>
                                 <div class="col-span-10">
-                                    <h2 class = "text-4xl font-bold uppercase pb-2"><?php the_sub_field('location_title'); ?></h2>
-                                    <h3 class = "text-xl font-bold uppercase"><?php the_sub_field('day_1'); ?></h3>
-                                    <p class = "pb-5"><?php the_sub_field('time_1'); ?></p>
+                                    <h2 class="text-4xl font-bold uppercase pb-2"><?php the_sub_field('location_title'); ?></h2>
+                                    <h3 class="text-xl font-bold uppercase"><?php the_sub_field('day_1'); ?></h3>
+                                    <p class="pb-5"><?php the_sub_field('time_1'); ?></p>
 
-                                    <h3 class = "text-xl font-bold uppercase"><?php the_sub_field('day_2'); ?></h3>
+                                    <h3 class="text-xl font-bold uppercase"><?php the_sub_field('day_2'); ?></h3>
                                     <p><?php the_sub_field('time_2'); ?></p>
                                 </div>
                             </div>
@@ -69,9 +69,9 @@ get_header(); ?>
                                     </div>
                                 </div>
                                 <div class="col-span-10">
-                                    <h2 class = "text-4xl font-bold uppercase pb-2"><?php the_sub_field('location_title'); ?></h2>
-                                    <h3 class = "text-xl font-bold uppercase"><?php the_sub_field('day_1'); ?></h3>
-                                    <p class = "pb-5"><?php the_sub_field('time_1'); ?></p>
+                                    <h2 class="text-4xl font-bold uppercase pb-2"><?php the_sub_field('location_title'); ?></h2>
+                                    <h3 class="text-xl font-bold uppercase"><?php the_sub_field('day_1'); ?></h3>
+                                    <p class="pb-5"><?php the_sub_field('time_1'); ?></p>
                                 </div>
                             </div>
                         <?php endwhile; ?>
@@ -88,7 +88,7 @@ get_header(); ?>
                                     </div>
                                 </div>
                                 <div class="col-span-10">
-                                    <h2 class = "text-4xl font-bold uppercase pb-2"><?php the_sub_field('location_title'); ?></h2>
+                                    <h2 class="text-4xl font-bold uppercase pb-2"><?php the_sub_field('location_title'); ?></h2>
                                     <a href="<?php the_sub_field('button_link'); ?>">
                                         <button class="mx-auto lg:mx-0 bg-yellow text-black font-bold rounded-md py-3 px-5 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                                             <?php the_sub_field('button_text'); ?>
@@ -103,7 +103,7 @@ get_header(); ?>
                 </div>
 
                 <div class="col-span-12 md:col-span-4 relative z-0">
-                    <img class = "md:absolute bottom-0" src="<?php the_field('houses'); ?>" alt="Houses">
+                    <img class="md:absolute bottom-0" src="<?php the_field('houses'); ?>" alt="Houses">
                 </div>
 
             </div>
@@ -156,10 +156,9 @@ endif;
 ?>
     </div>
 
-
-
-
-
+    <!-- Start FAQ -->
+        <?php get_template_part('components/layouts/faq'); ?>
+    <!-- END FAQ -->
 
 <?php
 get_footer();
