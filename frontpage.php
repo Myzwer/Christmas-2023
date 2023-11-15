@@ -102,7 +102,7 @@ get_header(); ?>
 
                 </div>
 
-                <div class="col-span-12 md:col-span-4 relative z-0">
+                <div class="col-span-12 md:col-span-4 relative z-0 px-5">
                     <img class="md:absolute bottom-0" src="<?php the_field('houses'); ?>" alt="Houses">
                 </div>
 
