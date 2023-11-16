@@ -23,7 +23,7 @@
     <link rel="profile" href="https://gmpg.org/xfn/11">
 
     <!--Font Awesome Loadin-->
-    <script src="https://kit.fontawesome.com/e9f0a6af17.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/8bacbabe02.js" crossorigin="anonymous"></script>
 
     <!--Wordpress Required Stuff-->
     <?php wp_head(); ?>
