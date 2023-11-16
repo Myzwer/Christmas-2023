@@ -50,11 +50,11 @@ get_header(); ?>
     <div class="bg-yellow">
         <div class='lg:max-w-6xl mx-auto grid grid-cols-12 p-5 py-10 gap-4 md:gap-10'>
             <div class="col-span-12 md:col-span-6 relative">
-                    <?php
-                    // Gravity Forms Shortcode
-                    $formid = get_field("maps_shortcode");
-                    echo do_shortcode("[wpgmza id='$formid']");
-                    ?>
+                <?php
+                // Gravity Forms Shortcode
+                $formid = get_field("maps_shortcode");
+                echo do_shortcode("[wpgmza id='$formid']");
+                ?>
 
             </div>
 
@@ -92,6 +92,23 @@ get_header(); ?>
                 </div>
 
 
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-red text-white">
+        <div class='lg:max-w-6xl mx-auto grid grid-cols-12 p-5 py-10 gap-4 md:gap-10'>
+            <div class="col-span-12 md:col-span-8 relative md:mx-10 mt-5 relative">
+                <div class="content-middle-medium">
+                    <h2 class="text-4xl font-bold uppercase pb-2"><?php the_field('gift_title'); ?></h2>
+                    <p class=""><?php the_field('mug_copy'); ?></p>
+                </div>
+            </div>
+            <div class="col-span-12 md:col-span-4 relative">
+                <div class="image-border">
+                    <img src="<?php the_field('mug_image'); ?>" alt="Mug Image" class="rounded-image">
+                    <div class="inset-box"></div>
+                </div>
             </div>
         </div>
     </div>
