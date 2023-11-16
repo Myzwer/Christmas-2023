@@ -135,5 +135,9 @@ get_header(); ?>
     </div>
 </div>
 
+    <!-- Start FAQ -->
+<?php get_template_part('components/layouts/faq'); ?>
+    <!-- END FAQ -->
+
 <?php
 get_footer();
