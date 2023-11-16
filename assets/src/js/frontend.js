@@ -1,5 +1,6 @@
 import "../sass/frontend.scss";
 import "./particles";
+import "./accordion";
 
 (function ($) {
   // Begin jQuery
