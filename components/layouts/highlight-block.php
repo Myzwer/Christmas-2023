@@ -2,7 +2,8 @@
     <div class='lg:max-w-6xl mx-auto grid grid-cols-12 px-5 md:px-0 py-10 gap-4'>
         <div class="col-span-12 md:col-span-8 relative md:mx-5 mt-5">
             <div class="content-middle-medium">
-                <h2 class="text-4xl font-bold uppercase pb-2"><?php the_sub_field('title'); ?></h2>
+                <h2 class="text-4xl font-bold uppercase "><?php the_sub_field('title'); ?></h2>
+                <h3 class="text-xl font-bold uppercase pb-2"><?php the_sub_field('subtitle'); ?></h3>
                 <p class=""><?php the_sub_field('main_copy'); ?></p>
 
                 <?php if( have_rows('button') ): ?>
