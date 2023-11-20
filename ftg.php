@@ -114,24 +114,21 @@ get_header(); ?>
     </div>
 
     <div class="bg-blue text-black">
-        <div class='lg:max-w-6xl mx-auto grid grid-cols-12 p-5 py-10 gap-4 md:gap-10'>
-            <div class="col-span-12 relative  mt-5">
+        <div class='lg:max-w-6xl mx-auto grid grid-cols-12 p-5 py-10 md:py-20 gap-4 md:gap-10'>
+            <div class="col-span-12 relative">
                 <h2 class="text-4xl font-bold uppercase pb-2"><?php the_field('arrival_header'); ?></h2>
             </div>
-            <div class="col-span-12 md:col-span-10 relative relative">
+            <div class="col-span-12 md:col-span-10 lg:col-span-8 relative relative">
                 <?php get_template_part('components/layouts/accordion'); ?>
-            </div>
-
-            <div class="col-span-12 md:col-span-2 relative">
-                <div class="hidden md:block absolute bottom-0">
-                <img src="<?php the_field('decoration_photo_1'); ?>" alt="Decor Image">
-                </div>
             </div>
 
         </div>
     </div>
 <div class="bg-blue hidden md:block">
     <div class="bg-no-repeat bg-scroll bg-cover relative " style="background: url('<?php the_field('decoration_photo_2'); ?>') center center; background-repeat: no-repeat; background-size: cover; height: 8vh;">
+        <div class="hidden lg:block absolute bottom-0 right-0">
+            <img src="<?php the_field('decoration_photo_1'); ?>" alt="Decor Image">
+        </div>
     </div>
 </div>
 

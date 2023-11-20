@@ -1,20 +1,18 @@
-$text: #333333;
-$gray: #333333;
-$lightgray: #333333;
-$blue: #333333;
+$color: #333333;
 
-/* stylelint-disable max-nesting-depth */
+/* This code requires some attribute selectors and was written for a different project that used higher nesting depth */
+/* stylelint-disable max-nesting-depth, selector-no-qualifying-type */
 
 .accordion {
   .accordion-item {
-    border-bottom: 1px solid $lightgray;
+    border-bottom: 1px solid $color;
     button[aria-expanded="true"] {
-      border-bottom: 1px solid $blue;
+      border-bottom: 1px solid $color;
     }
   }
   button {
     background: none;
-    color: $text;
+    color: $color;
     display: block;
     font-size: 1.15em;
     font-weight: 400;
@@ -31,8 +29,8 @@ $blue: #333333;
       }
     }
     .accordion-title {
-      padding: 1em 1.5em 1em 0;
       font-size: 1.5em;
+      padding: 1em 1.5em 1em 0;
     }
     .icon {
       border: 1px solid;
@@ -41,7 +39,7 @@ $blue: #333333;
       height: 22px;
       position: absolute;
       right: 0;
-      top: 18px;
+      top: 30px;
       width: 22px;
       &:before {
         background: currentColor;
@@ -74,6 +72,7 @@ $blue: #333333;
     + .accordion-content {
       max-height: 100%;
       opacity: 1;
+      padding: 30px 0;
       transition: all 0.2s linear;
       will-change: opacity, max-height;
     }
@@ -91,4 +90,4 @@ $blue: #333333;
     }
   }
 }
-/* stylelint-enable max-nesting-depth */
+/* stylelint-enable max-nesting-depth, selector-no-qualifying-type */
