@@ -21,7 +21,7 @@ get_header(); ?>
     <video class="header-video" src="<?php the_field('video'); ?>" autoplay loop playsinline muted></video>
 
     <div class="viewport-header">
-        <div class="head-container z-10">
+        <div class="head-container">
             <div class="w-10/12 md:w-1/2 mx-auto">
                 <img src="<?php the_field('acf_logo');?>" alt="ACF Logo">
             </div>

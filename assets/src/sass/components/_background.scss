@@ -47,6 +47,16 @@
   }
 }
 
+.head-container {
+  margin-top: -100px;
+}
+
+@media screen and (min-width: 40em) {
+  .head-container {
+    margin-top: 0;
+  }
+}
+
 .viewport-header {
   align-items: center;
   display: flex;

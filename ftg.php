@@ -20,9 +20,9 @@ get_header(); ?>
     <video class="header-video" src="<?php the_field('video'); ?>" autoplay loop playsinline muted></video>
 
     <div class="viewport-header">
-        <div class="head-container z-10">
+        <div class="head-container">
             <h1 class="text-red text-5xl md:text-8xl font-bold uppercase"><?php the_field('title'); ?></h1>
-            <h1 class="text-red text-4xl md:text-4xl font-bold uppercase"><?php the_field('subtitle'); ?></h1>
+            <h1 class="text-red text-3xl md:text-4xl font-bold uppercase"><?php the_field('subtitle'); ?></h1>
         </div>
     </div>
     <!-- End Header -->
