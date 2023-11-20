@@ -30,6 +30,13 @@ get_header(); ?>
 
     <div class="bg-red text-white relative z-20">
         <div class='lg:max-w-6xl mx-auto grid grid-cols-12 px-5 md:px-0 py-10 gap-4'>
+
+            <div class="col-span-12 md:col-span-6 relative md:order-2">
+                <div class="content-middle-medium">
+                    <img src=" <?php the_field('resource_image'); ?>" alt="">
+                </div>
+            </div>
+
             <div class="col-span-12 md:col-span-6 relative md:mx-5 mt-5">
                 <h2 class="text-4xl font-bold uppercase pb-2"><?php the_field('resource_title'); ?></h2>
                 <p class="text-xl"><?php the_field('resource_copy'); ?></p>
@@ -39,11 +46,7 @@ get_header(); ?>
                 echo do_shortcode("[gravityform id='$formid']");
                 ?>
             </div>
-            <div class="col-span-12 md:col-span-6 relative">
-                <div class="content-middle-medium">
-                    <img src=" <?php the_field('resource_image'); ?>" alt="">
-                </div>
-            </div>
+
         </div>
     </div>
 
