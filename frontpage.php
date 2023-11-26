@@ -25,8 +25,8 @@ get_header(); ?>
             <div class="w-10/12 md:w-1/2 mx-auto">
                 <img src="<?php the_field('acf_logo');?>" alt="ACF Logo">
             </div>
-            <div class="bg-white rounded-xl shadow-xl p-3 m-5">
-            <h2 class="text-red text-xl md:text-3xl font-bold uppercase"><?php the_field('subtitle');?></h2>
+            <div class="bg-white rounded-xl shadow-xl p-3 m-5 md:mx-20">
+                <h2 class="text-red text-xl md:text-3xl font-bold uppercase"><?php the_field('subtitle');?></h2>
             </div>
         </div>
     </div>
